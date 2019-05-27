@@ -1,7 +1,7 @@
 package Boulderdash.contract;
 
 /**
- * Hello world!
+ * Hello world!s
  *
  */
 public class App 
