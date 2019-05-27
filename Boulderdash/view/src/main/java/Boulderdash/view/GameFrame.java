@@ -6,6 +6,7 @@ public class GameFrame extends JFrame{
 	public static int longFen=2400;
 	public static int largFen=896;
 	
+	
 	public GameFrame() {
 		GamePanel gamepanel=new GamePanel();
 		this.setTitle("Boulder Dash");
