@@ -57,7 +57,11 @@ public Image getGradin() {
 }
 
 
-
+public void dessineGradin() {
+	
+	System.out.println("yo");
+	
+}
 
 
 }

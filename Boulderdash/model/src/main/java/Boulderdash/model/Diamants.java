@@ -10,7 +10,12 @@ import java.util.Scanner;
 
 public class Diamants {
 
+
+public void dessineDiamants() {
 	
+	System.out.println("yo");
+	
+}
 			
 
 }
