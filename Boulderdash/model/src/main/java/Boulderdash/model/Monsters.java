@@ -2,11 +2,13 @@ package Boulderdash.model;
 
 import java.awt.Image;
 
-public class Rockman {
+import javax.swing.ImageIcon;
+
+public class Monsters {
+
 	int x;
 	int y;
-	Image rockman;
-	
+	Image Monster=new ImageIcon("").getImage();
 	public int getX() {
 		return x;
 	}
@@ -19,11 +21,11 @@ public class Rockman {
 	public void setY(int y) {
 		this.y = y;
 	}
-	public Image getRockman() {
-		return rockman;
+	public Image getMonster() {
+		return Monster;
 	}
-	public void setRockman(Image rockman) {
-		this.rockman = rockman;
+	public void setMonster(Image monster) {
+		Monster = monster;
 	}
 	
 	
