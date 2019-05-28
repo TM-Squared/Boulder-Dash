@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 import javax.swing.ImageIcon;
 
-public class Diamonds {
+public class Diamonds extends ImoObject{
 
 	int x;
 	int y;

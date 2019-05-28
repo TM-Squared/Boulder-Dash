@@ -4,10 +4,10 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-public class Rock {
+public class Rock extends ImoObject {
 	int x;
 	int y;
-	Image rock=new ImageIcon("C:\\Users\\TOUSSI Manoel\\git\\Boulder-Dash\\Boulderdash\\view\\Images\\roche[1578].png").getImage();
+	Image rock;
 	
 	public int getX() {
 		return x;

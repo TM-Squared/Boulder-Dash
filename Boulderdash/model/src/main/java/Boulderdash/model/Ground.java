@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 import javax.swing.ImageIcon;
 
-public class Ground {
+public class Ground extends ImoObject{
 	int x;
 	int y;
-	Image ground=new ImageIcon("C:\\Users\\TOUSSI Manoel\\git\\Boulder-Dash\\Boulderdash\\view\\Images\\sol[1579].png").getImage();
+	Image ground;
 	public int getX() {
 		return x;
 	}
