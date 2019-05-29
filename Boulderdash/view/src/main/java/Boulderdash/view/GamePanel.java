@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 
 import Boulderdash.model.Background;
 import Boulderdash.model.Diamonds;
+import Boulderdash.model.Door;
 import Boulderdash.model.Ground;
 import Boulderdash.model.ImoObject;
 import Boulderdash.model.Monsters;
@@ -20,22 +21,10 @@ public class GamePanel extends JPanel{
 	
 	Image background=new ImageIcon("C:\\Users\\TOUSSI Manoel\\git\\Boulder-Dash\\Boulderdash\\view\\Images\\solnoir[1569].png").getImage(); 
 	static level map=new level(1);
-	Wall wall=new Wall();
-	Diamonds diamond=new Diamonds();
-	Rockman rockman=new Rockman();
-	Ground ground= new Ground();
-	Monsters monster=new Monsters();
-	Rock rock=new Rock();
 	public static ImoObject[][] imoobjet;
 	
-	public GamePanel() {
-		wall.setWall(new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\mur[1577].png").getImage());
-		rockman.setRockman(new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\Dash[1570].png").getImage());
-		diamond.setDiamond(new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\diam1[1571].png").getImage());
-		ground.setGround(new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\sol[1579].png").getImage());
-		monster.setMonster(new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\monster.png").getImage());
-		rock.setRock(new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\roche[1578].png").getImage());
-	imoobjet=new ImoObject[28][75];
+	public GamePanel() {	
+	imoobjet=new ImoObject[GameFrame.y][GameFrame.x];
 	imoobjet=Caract();
 	
 	}
@@ -43,24 +32,27 @@ public class GamePanel extends JPanel{
 	public static ImoObject[][] Caract() {
 		int x=0;
 		int y=0;
-		ImoObject[][] imoObject= new ImoObject[28][75];
+		ImoObject[][] imoObject= new ImoObject[GameFrame.y][GameFrame.x];
 		
-		for(int j=0; j<28; j++) {
-			for(int i=0; i<75; i++) {
+		for(int j=0; j<GameFrame.y; j++) {
+			for(int i=0; i<GameFrame.x; i++) {
 				if(map.getTableau()[j][i]=='M') {
-					imoObject[j][i]= new Wall();
+					imoObject[j][i]= new Wall(y,x);
 				}
-				if(map.getTableau()[j][i]=='5') {
-					imoObject[j][i]= new Ground();
+				if(map.getTableau()[j][i]=='S') {
+					imoObject[j][i]= new Ground(y,x);
 				}
 				if(map.getTableau()[j][i]=='D') {
-					imoObject[j][i]= new Diamonds();
+					imoObject[j][i]= new Diamonds(y,x);
 				}
-				if(map.getTableau()[j][i]=='M') {
-					imoObject[j][i]= new Rock();
+				if(map.getTableau()[j][i]=='R') {
+					imoObject[j][i]= new Rock(y,x);
 				}
 				if(map.getTableau()[j][i]=='-') {
-					imoObject[j][i]= new Background();
+					imoObject[j][i]= new Background(y,x);
+				}
+				if(map.getTableau()[j][i]=='P') {
+					imoObject[j][i]= new Door(y,x);
 				}
 				
 				x+=32;
@@ -75,8 +67,8 @@ public class GamePanel extends JPanel{
 	public void paintComponent(Graphics g) {
 		int x=0;
 		int y=0;
-		for(int j=0; j<28; j++) {
-			for(int i=0; i<75; i++) {
+		for(int j=0; j<GameFrame.y; j++) {
+			for(int i=0; i<GameFrame.x; i++) {
 				g.drawImage(this.background,x,y,32,32,this);
 				x+=32;
 			}
@@ -87,7 +79,14 @@ public class GamePanel extends JPanel{
 		int a=0;
 		int b=0;
 		
-		
+		for(int j=0; j<GameFrame.y; j++) {
+			for(int i=0; i<GameFrame.x; i++) {
+				g.drawImage(imoobjet[j][i].getImage(), a,b,32,32,this);
+				a+=32;
+			}
+			a=0;
+			b+=32;
+		}
 		
 		repaint();
 		

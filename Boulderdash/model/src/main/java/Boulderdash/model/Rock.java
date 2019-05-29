@@ -7,27 +7,14 @@ import javax.swing.ImageIcon;
 public class Rock extends ImoObject {
 	int x;
 	int y;
-	Image rock;
+	Image image;
 	
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
+	public Rock(int x, int y) {
+		super();
 		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
 		this.y = y;
+		this.image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\roche[1578].png").getImage();
 	}
-	public Image getRock() {
-		return rock;
-	}
-	public void setRock(Image rock) {
-		this.rock = rock;
-	}
-	
 	
 }
 

@@ -3,8 +3,10 @@ package Boulderdash.view;
 import javax.swing.JFrame;
 
 public class GameFrame extends JFrame{
-	public static int longFen=1000;
-	public static int largFen=896;
+	public static int longFen=800;
+	public static int largFen=600;
+	public static int x=55;
+	public static int y=26;
 	
 	
 	public GameFrame() {

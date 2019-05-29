@@ -9,20 +9,18 @@ import java.sql.Statement;
 import com.mysql.jdbc.Connection;
 
 public class DAOconnection {
-	static String URL="jdbc:mysql://localhost/javapetri?autoReconnect=true&useSSL=false";
+	static String URL="jdbc:mysql://localhost/jpublankproject?autoReconnect=true&useSSL=false";
 	static String LOGIN="root";
 	static String PASSWORD="";
 	private java.sql.Connection connection;
 	private Statement statement;
 	private ResultSet resultat;
-	
+	public final int x=55;
+	public final int y=26;
 	
 	public DAOconnection() {
 		super();
 		// TODO Auto-generated constructor stub
-		
-			this.connection=null;
-			this.statement=null;
 		
 	}
 	public boolean open() {
@@ -48,7 +46,7 @@ public class DAOconnection {
 	
 	public char[][] parniveau(int lvl) {
 		int x=1, code=lvl;
-		char [][] tab= new char[28][75];
+		char [][] tab= new char[this.y][this.x];
 		try {
 			final String sql = "{call parniveau(?)}";
 			this.open();
@@ -58,14 +56,15 @@ public class DAOconnection {
 			final ResultSet resultSet = call.getResultSet();
 			while(resultSet.next()) {
 				String lignes=resultSet.getString("lignes");
-				for(int j=0; j<28; j++) {
-					for(int i=0; i<75; i++) {
+				for(int j=0; j<this.y; j++) {
+					for(int i=0; i<this.x; i++) {
 						tab[j][i]=lignes.charAt(i);
 					}
 				}
 			}
 			//return helloWorld;
 		} catch (final SQLException e) {
+			System.out.println("échec");
 			e.printStackTrace();
 		}
 		return tab;

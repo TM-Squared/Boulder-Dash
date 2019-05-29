@@ -9,6 +9,13 @@ public class Monsters {
 	int x;
 	int y;
 	Image Monster=new ImageIcon("").getImage();
+	
+	public Monsters(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+		this.Monster=Monster;//à compléter
+	}
 	public int getX() {
 		return x;
 	}

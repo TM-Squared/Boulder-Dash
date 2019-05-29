@@ -2,28 +2,18 @@ package Boulderdash.model;
 
 import java.awt.Image;
 
+import javax.swing.ImageIcon;
+
 public class Rockman {
 	int x;
 	int y;
-	Image rockman;
+	Image image;
 	
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
+	public Rockman(int x, int y) {
+		super();
 		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
 		this.y = y;
-	}
-	public Image getRockman() {
-		return rockman;
-	}
-	public void setRockman(Image rockman) {
-		this.rockman = rockman;
+		this.image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\Dash[1570].png").getImage();
 	}
 	
 	

@@ -6,6 +6,11 @@ public class ImoObject {
 	int x;
 	int y;
 	Image image;
+	
+	public ImoObject() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public int getX() {
 		return x;
 	}

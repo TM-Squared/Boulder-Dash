@@ -6,7 +6,7 @@ public class level {
 	
 	public level(int lvl) {
 		DAOconnection daoconnection=new DAOconnection();
-		tableau=daoconnection.parniveau(lvl);
+		this.tableau=daoconnection.parniveau(lvl);
 	}
 
 

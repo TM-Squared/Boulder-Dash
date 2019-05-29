@@ -2,29 +2,18 @@ package Boulderdash.model;
 
 import java.awt.Image;
 
+import javax.swing.ImageIcon;
+
 public class Wall extends ImoObject {
 	int x;
 	int y;
-	Image wall;
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
+	Image image;
+	public Wall(int x, int y) {
+		super();
 		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
 		this.y = y;
+		this.image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\mur[1577].png").getImage();
 	}
-	public Image getWall() {
-		return wall;
-	}
-	public void setWall(Image wall) {
-		this.wall = wall;
-	}
-	
-	
+
 
 }
