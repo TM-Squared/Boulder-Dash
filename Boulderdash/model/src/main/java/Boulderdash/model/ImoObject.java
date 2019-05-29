@@ -7,9 +7,9 @@ public class ImoObject {
 	int y;
 	Image image;
 	
-	public ImoObject() {
-		super();
-		// TODO Auto-generated constructor stub
+	public ImoObject(int x,int y) {
+		this.x=x;
+		this.y=y;
 	}
 	public int getX() {
 		return x;

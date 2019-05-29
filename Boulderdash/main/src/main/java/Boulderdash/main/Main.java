@@ -2,6 +2,7 @@ package Boulderdash.main;
 
 import Boulderdash.model.DAOconnection;
 import Boulderdash.view.GameFrame;
+import Boulderdash.view.GamePanel;
 
 public class Main {
 
@@ -10,7 +11,10 @@ public class Main {
 		DAOconnection daoconnection=new DAOconnection();
 		daoconnection.open();
 		GameFrame gameframe= new GameFrame();
-		
+		/*
+		GamePanel gamepanel=new GamePanel();
+		gamepanel.parcourir();
+		*/
 	}
 
 }

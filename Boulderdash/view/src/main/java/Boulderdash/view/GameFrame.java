@@ -5,8 +5,8 @@ import javax.swing.JFrame;
 public class GameFrame extends JFrame{
 	public static int longFen=800;
 	public static int largFen=600;
-	public static int x=55;
-	public static int y=26;
+	public final static int x=55;
+	public final static int y=26;
 	
 	
 	public GameFrame() {

@@ -45,7 +45,7 @@ public class DAOconnection {
 	}
 	
 	public char[][] parniveau(int lvl) {
-		int x=1, code=lvl;
+		int x=1, code=lvl, j=0;
 		char [][] tab= new char[this.y][this.x];
 		try {
 			final String sql = "{call parniveau(?)}";
@@ -56,11 +56,11 @@ public class DAOconnection {
 			final ResultSet resultSet = call.getResultSet();
 			while(resultSet.next()) {
 				String lignes=resultSet.getString("lignes");
-				for(int j=0; j<this.y; j++) {
+				
 					for(int i=0; i<this.x; i++) {
 						tab[j][i]=lignes.charAt(i);
 					}
-				}
+				j++;
 			}
 			//return helloWorld;
 		} catch (final SQLException e) {

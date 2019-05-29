@@ -19,7 +19,8 @@ import Boulderdash.model.level;
 
 public class GamePanel extends JPanel{
 	
-	Image background=new ImageIcon("C:\\Users\\TOUSSI Manoel\\git\\Boulder-Dash\\Boulderdash\\view\\Images\\solnoir[1569].png").getImage(); 
+	Image background=new ImageIcon("C:\\Users\\TOUSSI Manoel\\git\\Boulder-Dash\\Boulderdash\\view\\Images\\solnoir[1569].png").getImage();
+	
 	static level map=new level(1);
 	public static ImoObject[][] imoobjet;
 	
@@ -37,22 +38,22 @@ public class GamePanel extends JPanel{
 		for(int j=0; j<GameFrame.y; j++) {
 			for(int i=0; i<GameFrame.x; i++) {
 				if(map.getTableau()[j][i]=='M') {
-					imoObject[j][i]= new Wall(y,x);
+					imoObject[j][i]= new Wall(x,y);
 				}
 				if(map.getTableau()[j][i]=='S') {
-					imoObject[j][i]= new Ground(y,x);
+					imoObject[j][i]= new Ground(x,y);
 				}
 				if(map.getTableau()[j][i]=='D') {
-					imoObject[j][i]= new Diamonds(y,x);
+					imoObject[j][i]= new Diamonds(x,y);
 				}
 				if(map.getTableau()[j][i]=='R') {
-					imoObject[j][i]= new Rock(y,x);
+					imoObject[j][i]= new Rock(x,y);
 				}
 				if(map.getTableau()[j][i]=='-') {
-					imoObject[j][i]= new Background(y,x);
+					imoObject[j][i]= new Background(x,y);
 				}
 				if(map.getTableau()[j][i]=='P') {
-					imoObject[j][i]= new Door(y,x);
+					imoObject[j][i]= new Door(x,y);
 				}
 				
 				x+=32;
@@ -62,6 +63,16 @@ public class GamePanel extends JPanel{
 		}
 		return imoObject;
 		
+	} 
+	
+
+	public void parcourir() {
+		
+		for(ImoObject tab2[]:imoobjet) {
+			for(ImoObject tab1: tab2) {
+				System.out.println(tab1);
+			}
+		}
 	}
 	
 	public void paintComponent(Graphics g) {
@@ -76,19 +87,24 @@ public class GamePanel extends JPanel{
 			y+=32;
 		}
 		
-		int a=0;
+		/*int a=0;
 		int b=0;
+		*/
 		
 		for(int j=0; j<GameFrame.y; j++) {
 			for(int i=0; i<GameFrame.x; i++) {
-				g.drawImage(imoobjet[j][i].getImage(), a,b,32,32,this);
-				a+=32;
+				if(imoobjet[j][i]!=null)
+				g.drawImage(imoobjet[j][i].getImage(), imoobjet[j][i].getX(), imoobjet[j][i].getY(),32,32,this);
+				
+				//System.out.println(imoobjet[j][i].getClass().getName());
+
 			}
-			a=0;
-			b+=32;
+			
 		}
-		
+	
+	
 		repaint();
 		
 	}
+	
 }
