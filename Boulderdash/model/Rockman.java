@@ -1,6 +1,6 @@
-/*package Boulderdash.model;
+package Boulderdash.model;
 
-/*import java.awt.Image;
+import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
@@ -19,4 +19,3 @@ public class Rockman extends MobileObject {
 	
 	
 }
-*/

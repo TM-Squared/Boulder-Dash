@@ -1,4 +1,4 @@
- package Boulderdash.model;
+/* package Boulderdash.model;
 
 import java.awt.Graphics;
 
@@ -20,7 +20,7 @@ public class Ground extends ImoObject{
 		this.setImage(image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\sol[1579].png").getImage());
 	}
 	
-}
+}*/
 
 
 

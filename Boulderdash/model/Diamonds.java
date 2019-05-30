@@ -1,4 +1,4 @@
-package Boulderdash.model;
+/*package Boulderdash.model;
 
 import java.awt.Image;
 

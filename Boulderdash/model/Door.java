@@ -1,4 +1,4 @@
-package Boulderdash.model;
+/*package Boulderdash.model;
 
 import java.awt.Image;
 
@@ -16,3 +16,4 @@ public class Door extends ImoObject {
 	
 
 }
+*/
