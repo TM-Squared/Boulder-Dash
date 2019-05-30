@@ -4,7 +4,7 @@ public class level {
 	private char [][] tableau;
 	
 	
-	public level(int lvl) {
+	/*public level(int lvl) {
 		DAOconnection daoconnection=new DAOconnection();
 		this.tableau=daoconnection.parniveau(lvl);
 	}
@@ -15,4 +15,4 @@ public class level {
 	}
 	
 	
-}
+}*/

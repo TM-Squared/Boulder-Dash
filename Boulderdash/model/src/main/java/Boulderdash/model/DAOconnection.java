@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/*import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Connection;
 
 public class DAOconnection {
 	static String URL="jdbc:mysql://localhost/jpublankproject?autoReconnect=true&useSSL=false";
