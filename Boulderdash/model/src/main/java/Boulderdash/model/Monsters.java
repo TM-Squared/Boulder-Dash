@@ -4,36 +4,15 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-public class Monsters {
+public class Monsters extends MobileObject {
 
 	int x;
 	int y;
-	Image Monster=new ImageIcon("").getImage();
+	Image image;
 	
 	public Monsters(int x, int y) {
-		super();
-		this.x = x;
-		this.y = y;
-		this.Monster=Monster;//à compléter
+		super(x,y);
+		this.setImage(image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\monster.png").getImage());
 	}
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-	public Image getMonster() {
-		return Monster;
-	}
-	public void setMonster(Image monster) {
-		Monster = monster;
-	}
-	
 	
 }

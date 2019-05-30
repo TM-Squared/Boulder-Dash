@@ -2,12 +2,14 @@ package Boulderdash.view;
 
 import javax.swing.JFrame;
 
+import Boulderdash.controller.KeyBoard;
+
 public class GameFrame extends JFrame{
 	public static int longFen=800;
 	public static int largFen=600;
 	public final static int x=55;
 	public final static int y=26;
-	
+	KeyBoard move=new KeyBoard();
 	
 	public GameFrame() {
 		GamePanel gamepanel=new GamePanel();
@@ -18,6 +20,7 @@ public class GameFrame extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setContentPane(gamepanel);
 		this.setVisible(true);
+		this.addKeyListener(move);
 	}
 	
 }
