@@ -6,15 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/*import com.mysql.jdbc.Connection;
-
 public class DAOconnection {
 	static String URL="jdbc:mysql://localhost/jpublankproject?autoReconnect=true&useSSL=false";
 	static String LOGIN="root";
 	static String PASSWORD="";
 	private java.sql.Connection connection;
 	private Statement statement;
-	private ResultSet resultat;
+	
 	public final int x=55;
 	public final int y=26;
 	
@@ -28,7 +26,7 @@ public class DAOconnection {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			this.connection=DriverManager.getConnection(URL,LOGIN, PASSWORD);
-			this.statement=this.connection.createStatement();
+			this.connection.createStatement();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("echec de la connection");
