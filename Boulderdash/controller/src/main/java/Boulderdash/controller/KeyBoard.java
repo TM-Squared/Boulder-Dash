@@ -8,63 +8,20 @@ import Boulderdash.model.Background;
 import Boulderdash.model.Diamonds;
 import Boulderdash.model.Ground;
 import Boulderdash.model.Rockman;
+import Boulderdash.model.Wall;
 
 public class KeyBoard implements KeyListener  {
-	static Rockman rockman=new Rockman(0,0);
+	static Rockman rockman=new Rockman(224,98);
+	static boolean up=true;
+	static boolean down=true;
+	static boolean right=true;
+	static boolean left=true;
+	Collision collision=new Collision();
 	
 	public static Rockman getRockman() {
 		return rockman;
 	}
 
-	public void dig() {
-		for(int j=0; j<26; j++) {
-			for(int i=0; i<55; i++) {
-				//System.out.println(Rockman.imoobjet[j][i]);
-				//System.out.println(j);
-				if(Rockman.imoobjet[j][i]!=null) {
-					if(Rockman.imoobjet[j][i].getClass().toString().equals(new Ground(0,0).getClass().toString())) {
-						if(Rockman.imoobjet[j][i].getX()==rockman.getX() && Rockman.imoobjet[j][i].getY()==rockman.getY()) {
-							
-							int a=Rockman.imoobjet[j][i].getX();
-							int b=Rockman.imoobjet[j][i].getY();
-							Rockman.imoobjet[j][i]=new Background(0,0);
-							Rockman.imoobjet[j][i].setX(a);
-							Rockman.imoobjet[j][i].setY(b);
-							
-							
-							//System.out.println(rockman.getX());
-							//System.out.println(rockman.getY());
-							break;
-						}
-					}
-				}
-				
-			}
-		}
-	}
-	
-	public void collectDiamonds() {
-		for(int j=0; j<26; j++) {
-			for(int i=0; i<55; i++) {
-				//System.out.println(Rockman.imoobjet[j][i]);
-				//System.out.println(j);
-				if(Rockman.imoobjet[j][i]!=null) {
-					if(Rockman.imoobjet[j][i].getClass().toString().equals(new Diamonds(0,0).getClass().toString())) {
-						if(Rockman.imoobjet[j][i].getX()==rockman.getX() && Rockman.imoobjet[j][i].getY()==rockman.getY()) {
-							
-							int a=Rockman.imoobjet[j][i].getX();
-							int b=Rockman.imoobjet[j][i].getY();
-							Rockman.imoobjet[j][i]=new Background(0,0);
-							Rockman.imoobjet[j][i].setX(a);
-							Rockman.imoobjet[j][i].setY(b);
-							
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
@@ -73,18 +30,33 @@ public class KeyBoard implements KeyListener  {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		dig();
-		collectDiamonds();
+		collision.dig();
+		collision.collectDiamonds();
+		collision.moveCollision();
 		// TODO Auto-generated method stub
-		if(e.getKeyCode()==KeyEvent.VK_LEFT)
-			rockman.setX(rockman.getX()-32);
-		else if(e.getKeyCode()==KeyEvent.VK_RIGHT)
-			rockman.setX(rockman.getX()+32);
-		else if(e.getKeyCode()==KeyEvent.VK_UP)
-			rockman.setY(rockman.getY()-32);
-		else if(e.getKeyCode()==KeyEvent.VK_DOWN)
-			rockman.setY(rockman.getY()+32);
 		
+		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+			if(KeyBoard.left==true) {
+				rockman.setX(rockman.getX()-32);
+			}
+		}
+		
+		else if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+			 if(KeyBoard.right==true) {
+				rockman.setX(rockman.getX()+32);
+			}
+			 
+		}
+		if(e.getKeyCode()==KeyEvent.VK_UP) {
+			if(KeyBoard.up==true) {
+			rockman.setY(rockman.getY()-32);
+			}
+		}
+		if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+			if(KeyBoard.down==true) {
+				rockman.setY(rockman.getY()+32);
+			}
+		}
 	}
 
 	@Override
@@ -92,7 +64,37 @@ public class KeyBoard implements KeyListener  {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
 
+	public static boolean isUp() {
+		return up;
+	}
+
+	public static void setUp(boolean up) {
+		KeyBoard.up = up;
+	}
+
+	public static boolean isDown() {
+		return down;
+	}
+
+	public static void setDown(boolean down) {
+		KeyBoard.down = down;
+	}
+
+	public static boolean isRight() {
+		return right;
+	}
+
+	public static void setRight(boolean right) {
+		KeyBoard.right = right;
+	}
+
+	public static boolean isLeft() {
+		return left;
+	}
+
+	public static void setLeft(boolean left) {
+		KeyBoard.left = left;
+	}
+	
 }

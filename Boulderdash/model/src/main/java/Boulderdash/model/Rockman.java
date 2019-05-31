@@ -12,7 +12,7 @@ public class Rockman extends MobileObject {
 	
 	
 	public Rockman(int x, int y) {
-		super(224, 98);
+		super(0, 0);
 		this.setImage(image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\Dash[1570].png").getImage());
 		imoobjet=new ImoObject[26][55];
 	}

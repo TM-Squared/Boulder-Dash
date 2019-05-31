@@ -5,8 +5,8 @@ import javax.swing.JFrame;
 import Boulderdash.controller.KeyBoard;
 
 public class GameFrame extends JFrame{
-	public static int longFen=800;
-	public static int largFen=600;
+	public static int longFen=2000;
+	public static int largFen=800;
 	public final static int x=55;
 	public final static int y=26;
 	KeyBoard move=new KeyBoard();
