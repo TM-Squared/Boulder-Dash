@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 public class Rock extends ImoObject {
 	int x;
 	int y;
-	Image image;
+	//Image image;
 	
 	public Rock(int x, int y) {
 		super(x,y);

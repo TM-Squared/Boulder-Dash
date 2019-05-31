@@ -21,6 +21,7 @@ public class DAOconnection {
 		// TODO Auto-generated constructor stub
 		
 	}
+	/*
 	public boolean open() {
 		
 		try {
@@ -67,5 +68,5 @@ public class DAOconnection {
 		}
 		return tab;
 	}
-
+*/
 }
