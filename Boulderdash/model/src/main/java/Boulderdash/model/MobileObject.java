@@ -2,50 +2,39 @@ package Boulderdash.model;
 
 import java.awt.Image;
 
-import javax.swing.ImageIcon;
-
-public class Rockman extends MobileObject {
+public class MobileObject {
 	int x;
 	int y;
 	Image image;
-	public static ImoObject[][] imoobjet;
 	
-	
-	public Rockman(int x, int y) {
-		super(0, 0);
-		this.setImage(image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\Dash[1570].png").getImage());
-		imoobjet=new ImoObject[26][55];
+	public MobileObject(int x, int y) {
+		super();
+		this.x=x;
+		this.y=y;
 	}
-
 
 	public int getX() {
 		return x;
 	}
 
-
 	public void setX(int x) {
 		this.x = x;
 	}
-
 
 	public int getY() {
 		return y;
 	}
 
-
 	public void setY(int y) {
 		this.y = y;
 	}
-
 
 	public Image getImage() {
 		return image;
 	}
 
-
 	public void setImage(Image image) {
 		this.image = image;
 	}
-	
 	
 }
