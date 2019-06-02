@@ -4,7 +4,7 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-public class Rockman extends MobileObject {
+public class Rockman /*extends MobileObject*/ {
 	int x;
 	int y;
 	Image image;
@@ -12,9 +12,11 @@ public class Rockman extends MobileObject {
 	
 	
 	public Rockman(int x, int y) {
-		super(0, 0);
+		//super(0, 0);
+		this.x=320;
+		this.y=160;
 		this.setImage(image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\Dash[1570].png").getImage());
-		imoobjet=new ImoObject[26][55];
+		imoobjet=new ImoObject[22][42];
 	}
 
 

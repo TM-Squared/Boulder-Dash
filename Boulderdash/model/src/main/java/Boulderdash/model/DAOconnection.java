@@ -15,8 +15,8 @@ public class DAOconnection {
 	private java.sql.Connection connection;
 	private Statement statement;
 	private ResultSet resultat;
-	public final int x=55;
-	public final int y=26;
+	public final int x=42;
+	public final int y=22;
 	
 	public DAOconnection() {
 		super();

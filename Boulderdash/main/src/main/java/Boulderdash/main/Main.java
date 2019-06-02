@@ -12,9 +12,8 @@ public class Main {
 		daoconnection.open();
 		GameFrame gameframe= new GameFrame();
 		/*
-		GamePanel gamepanel=new GamePanel();
-		gamepanel.parcourir();
-		*/
+		 * CODE EXECUTION
+		 */
 	}
 
 }

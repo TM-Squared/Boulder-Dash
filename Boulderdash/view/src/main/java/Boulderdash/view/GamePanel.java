@@ -21,41 +21,43 @@ import Boulderdash.model.level;
 
 public class GamePanel extends JPanel{
 	Background background=new Background(0,0);
-	//Image background=new ImageIcon("C:\\Users\\TOUSSI Manoel\\git\\Boulder-Dash\\Boulderdash\\view\\Images\\solnoir[1569].png").getImage();
-
+	static int lvl=LevelManagement.ChangeLevel();
 	KeyBoard keyboard=new KeyBoard();
-	static level map=new level(1);
-	
-	
+	static level map=new level(lvl);
+
 	
 	public GamePanel() {	
-	
-	Caract();
+		Caract();
+		
+		
 	}
 	
+	/*
+	 * assign each letter an element of the game
+	 */
 	public void Caract() {
 		int x=0;
 		int y=0;
-		//ImoObject[][] imoObject= new ImoObject[GameFrame.y][GameFrame.x];
+		
 		
 		for(int j=0; j<GameFrame.y; j++) {
 			for(int i=0; i<GameFrame.x; i++) {
-				if(map.getTableau()[j][i]=='M') {
+				if(map.getTableau()[j][i]=='M' || map.getTableau()[j][i]=='W') {
 					Rockman.imoobjet[j][i]= new Wall(x,y);
 				}
-				if(map.getTableau()[j][i]=='S') {
+				if(map.getTableau()[j][i]=='S'|| map.getTableau()[j][i]=='5' || map.getTableau()[j][i]=='G') {
 					Rockman.imoobjet[j][i]= new Ground(x,y);
 				}
-				if(map.getTableau()[j][i]=='D') {
+				if(map.getTableau()[j][i]=='D' || map.getTableau()[j][i]=='O') {
 					Rockman.imoobjet[j][i]= new Diamonds(x,y);
 				}
-				if(map.getTableau()[j][i]=='R') {
+				if(map.getTableau()[j][i]=='R' || map.getTableau()[j][i]=='B' || map.getTableau()[j][i]=='*') {
 					Rockman.imoobjet[j][i]= new Rock(x,y);
 				}
-				if(map.getTableau()[j][i]=='-') {
+				if(map.getTableau()[j][i]=='-' || map.getTableau()[j][i]==' ') {
 					Rockman.imoobjet[j][i]= new Background(x,y);
 				}
-				if(map.getTableau()[j][i]=='P') {
+				if(map.getTableau()[j][i]=='T') {
 					Rockman.imoobjet[j][i]= new Door(x,y);
 				}
 				
@@ -68,20 +70,11 @@ public class GamePanel extends JPanel{
 		
 	} 
 	
-/*
-	public void parcourir() {
-		
-		for(ImoObject tab2[]:imoobjet) {
-			for(ImoObject tab1: tab2) {
-				System.out.println(tab1);
-			}
-		}
-	}
-	*/
+
 	public void paintComponent(Graphics g) {
 		int x=0;
 		int y=0;
-		//DESSINE L'ARRIERE PLAN
+		//DRAW THE BACKGROUND
 		for(int j=0; j<GameFrame.y; j++) {
 			for(int i=0; i<GameFrame.x; i++) {
 				g.drawImage(background.getImage(),x,y,32,32,this);
@@ -91,10 +84,8 @@ public class GamePanel extends JPanel{
 			y+=32;
 		}
 		
-		/*int a=0;
-		int b=0;
-		*/
-		//DESSINE LA CARTEZ
+		
+		//DRAW THE MAP
 		for(int j=0; j<GameFrame.y; j++) {
 			for(int i=0; i<GameFrame.x; i++) {
 				if(Rockman.imoobjet[j][i]!=null)
@@ -103,8 +94,7 @@ public class GamePanel extends JPanel{
 		}
 		
 		
-			g.drawImage(keyboard.getRockman().getImage(),keyboard.getRockman().getX(),keyboard.getRockman().getY(),32,32, this);
-			//g.drawImage(background.getImage(),collision.getTab()[0], collision.getTab()[1],32, 32, this);
+			g.drawImage(KeyBoard.getRockman().getImage(),KeyBoard.getRockman().getX(),KeyBoard.getRockman().getY(),32,32, this);
 		repaint();
 		
 	}

@@ -27,12 +27,14 @@ public class KeyBoard implements KeyListener  {
 		// TODO Auto-generated method stub
 		
 	}
+	/*
+	 * HUMAN INTERFACE MACHINE*/
 
 	@Override
 	public void keyPressed(KeyEvent e) {
 		collision.dig();
 		collision.collectDiamonds();
-		collision.moveCollision();
+		//collision.moveCollision();
 		// TODO Auto-generated method stub
 		
 		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
@@ -65,36 +67,5 @@ public class KeyBoard implements KeyListener  {
 		
 	}
 
-	public static boolean isUp() {
-		return up;
-	}
-
-	public static void setUp(boolean up) {
-		KeyBoard.up = up;
-	}
-
-	public static boolean isDown() {
-		return down;
-	}
-
-	public static void setDown(boolean down) {
-		KeyBoard.down = down;
-	}
-
-	public static boolean isRight() {
-		return right;
-	}
-
-	public static void setRight(boolean right) {
-		KeyBoard.right = right;
-	}
-
-	public static boolean isLeft() {
-		return left;
-	}
-
-	public static void setLeft(boolean left) {
-		KeyBoard.left = left;
-	}
-	
+		
 }
