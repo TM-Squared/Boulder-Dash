@@ -34,8 +34,9 @@ public class Collision {
 			KeyBoard.left=true;
 		}
 	}
-	/*
-	 * DIG GROUND
+	/**
+	 * @author GROUP 8
+	 *ALOWS THE HERO TO COLLECT THE DIAMONDS
 	 */
 	public void dig() {
 		for(int j=0; j<22; j++) {
@@ -56,8 +57,9 @@ public class Collision {
 			}
 		}
 	}
-	/*
-	 * COLLECT DIAMONDS
+	/**
+	 * @author GROUP 8
+	 *ALLOWS THE HERO TO COLLECT THE DIAMONDS
 	 */
 	public void collectDiamonds() {
 		for(int j=0; j<22; j++) {
@@ -73,8 +75,6 @@ public class Collision {
 							Rockman.imoobjet[j][i]=new Background(0,0);
 							Rockman.imoobjet[j][i].setX(a);
 							Rockman.imoobjet[j][i].setY(b);
-							System.out.println(KeyBoard.rockman.getX());
-							System.out.println(KeyBoard.rockman.getY());
 							break;
 						}
 					}
@@ -82,8 +82,9 @@ public class Collision {
 			}
 		}
 	}
-	/*
-	 * COLLISION MANAGEMENT WITH THE WALL
+	/**
+	 * @author GROUP 8
+	 *COLLISION MANAGEMENT WITH THE WALL
 	 */
 	public void moveCollision() {
 		for(int j=0; j<22; j++) {

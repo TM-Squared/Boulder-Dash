@@ -27,8 +27,10 @@ public class KeyBoard implements KeyListener  {
 		// TODO Auto-generated method stub
 		
 	}
-	/*
-	 * HUMAN INTERFACE MACHINE*/
+	/**
+	 * @author GROUP 8
+	 *HUMAN INTERFACE MACHINE
+	 */
 
 	@Override
 	public void keyPressed(KeyEvent e) {

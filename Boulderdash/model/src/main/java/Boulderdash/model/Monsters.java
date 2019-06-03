@@ -4,7 +4,7 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-public class Monsters extends MobileObject {
+public class Monsters extends ImoObject {
 
 	int x;
 	int y;

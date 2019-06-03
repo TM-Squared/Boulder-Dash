@@ -19,6 +19,7 @@ import Boulderdash.model.Rockman;
 import Boulderdash.model.Wall;
 import Boulderdash.model.level;
 
+
 public class GamePanel extends JPanel{
 	Background background=new Background(0,0);
 	static int lvl=LevelManagement.ChangeLevel();
@@ -27,13 +28,11 @@ public class GamePanel extends JPanel{
 
 	
 	public GamePanel() {	
-		Caract();
-		
-		
+		Caract();		
 	}
-	
-	/*
-	 * assign each letter an element of the game
+	/**
+	 * @author GROUP 8
+	 *assign each letter an element of the game
 	 */
 	public void Caract() {
 		int x=0;
@@ -60,7 +59,9 @@ public class GamePanel extends JPanel{
 				if(map.getTableau()[j][i]=='T') {
 					Rockman.imoobjet[j][i]= new Door(x,y);
 				}
-				
+				if(map.getTableau()[j][i]=='F') {
+					Rockman.imoobjet[j][i]= new Monsters(x,y);
+				}
 				x+=32;
 			}
 			x=0;
@@ -70,7 +71,10 @@ public class GamePanel extends JPanel{
 		
 	} 
 	
-
+	/**
+	 * @author GROUP 8
+	 *DRAW ELEMENTS OF GAME
+	 */
 	public void paintComponent(Graphics g) {
 		int x=0;
 		int y=0;
@@ -92,8 +96,6 @@ public class GamePanel extends JPanel{
 				g.drawImage(Rockman.imoobjet[j][i].getImage(), Rockman.imoobjet[j][i].getX(), Rockman.imoobjet[j][i].getY(),32,32,this);				
 			}
 		}
-		
-		
 			g.drawImage(KeyBoard.getRockman().getImage(),KeyBoard.getRockman().getX(),KeyBoard.getRockman().getY(),32,32, this);
 		repaint();
 		

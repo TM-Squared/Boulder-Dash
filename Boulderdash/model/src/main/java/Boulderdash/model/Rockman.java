@@ -3,8 +3,11 @@ package Boulderdash.model;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
-
-public class Rockman /*extends MobileObject*/ {
+/**
+ * @author GROUP 8
+ *HERO OF GAME
+ */
+public class Rockman  {
 	int x;
 	int y;
 	Image image;
@@ -12,7 +15,6 @@ public class Rockman /*extends MobileObject*/ {
 	
 	
 	public Rockman(int x, int y) {
-		//super(0, 0);
 		this.x=320;
 		this.y=160;
 		this.setImage(image=new ImageIcon("C:\\Users\\TOUSSI Manoel\\Documents\\Cours\\Semestre2\\Bloc5 Conception et POO -Etudiants\\Projet2\\Myproject\\Dash[1570].png").getImage());

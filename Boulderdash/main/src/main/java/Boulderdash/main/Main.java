@@ -4,6 +4,10 @@ import Boulderdash.model.DAOconnection;
 import Boulderdash.view.GameFrame;
 import Boulderdash.view.GamePanel;
 
+/**
+ * @author GROUP 8
+ *EXECUTION OF PROGRAM
+ */
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,9 +15,7 @@ public class Main {
 		DAOconnection daoconnection=new DAOconnection();
 		daoconnection.open();
 		GameFrame gameframe= new GameFrame();
-		/*
-		 * CODE EXECUTION
-		 */
+		
 	}
 
 }

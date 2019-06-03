@@ -2,6 +2,10 @@ package Boulderdash.model;
 
 import java.awt.Image;
 
+/**
+ * @author GROUP 8
+ *GENERALISATION IMMOBILE OBJECTS
+ */
 public class ImoObject {
 	int x;
 	int y;

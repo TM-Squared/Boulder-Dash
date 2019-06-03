@@ -2,6 +2,10 @@ package Boulderdash.model;
 
 import java.awt.Image;
 
+/**
+ * @author GROUP 8
+ *GENERALISATION MOBILE OBJECTS
+ */
 public class MobileObject {
 	int x;
 	int y;

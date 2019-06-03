@@ -8,6 +8,10 @@ import java.sql.Statement;
 
 import com.mysql.jdbc.Connection;
 
+/**
+ * @author TOUSSI Manoel
+ *
+ */
 public class DAOconnection {
 	static String URL="jdbc:mysql://localhost/jpublankproject?autoReconnect=true&useSSL=false";
 	static String LOGIN="root";
@@ -23,6 +27,10 @@ public class DAOconnection {
 		// TODO Auto-generated constructor stub
 		
 	}
+	/**
+	 * CONNECTION WITH DATABASE
+	 *
+	 */
 	public boolean open() {
 		
 		try {
@@ -43,7 +51,10 @@ public class DAOconnection {
 		System.out.println("Bien connecté");
 		return true;
 	}
-	
+	/**
+	 * @author TOUSSI Manoel
+	 *STORE THE RESULT OF THE STORED PROCEDURE
+	 */
 	public char[][] parniveau(int lvl) {
 		int x=1, code=lvl, j=0;
 		char [][] tab= new char[this.y][this.x];
