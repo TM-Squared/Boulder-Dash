@@ -1,9 +1,7 @@
 package Boulderdash.view;
 
 import java.awt.Graphics;
-import java.awt.Image;
 
-import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
@@ -12,7 +10,6 @@ import Boulderdash.model.Background;
 import Boulderdash.model.Diamonds;
 import Boulderdash.model.Door;
 import Boulderdash.model.Ground;
-import Boulderdash.model.ImoObject;
 import Boulderdash.model.Monsters;
 import Boulderdash.model.Rock;
 import Boulderdash.model.Rockman;
@@ -20,7 +17,15 @@ import Boulderdash.model.Wall;
 import Boulderdash.model.level;
 
 
+/**
+ * @author GROUP 8
+ *
+ */
 public class GamePanel extends JPanel{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	Background background=new Background(0,0);
 	static int lvl=LevelManagement.ChangeLevel();
 	KeyBoard keyboard=new KeyBoard();
@@ -30,9 +35,9 @@ public class GamePanel extends JPanel{
 	public GamePanel() {	
 		Caract();		
 	}
+	
 	/**
-	 * @author GROUP 8
-	 *assign each letter an element of the game
+	 *ASSIGN EACH LETTER TO COMPONENTS 
 	 */
 	public void Caract() {
 		int x=0;
@@ -71,9 +76,9 @@ public class GamePanel extends JPanel{
 		
 	} 
 	
+	
 	/**
-	 * @author GROUP 8
-	 *DRAW ELEMENTS OF GAME
+	 *DRAW COMPONENTS
 	 */
 	public void paintComponent(Graphics g) {
 		int x=0;
@@ -87,8 +92,8 @@ public class GamePanel extends JPanel{
 			x=0;
 			y+=32;
 		}
-		
-		
+
+
 		//DRAW THE MAP
 		for(int j=0; j<GameFrame.y; j++) {
 			for(int i=0; i<GameFrame.x; i++) {

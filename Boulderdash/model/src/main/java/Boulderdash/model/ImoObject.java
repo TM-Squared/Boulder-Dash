@@ -11,10 +11,17 @@ public class ImoObject {
 	int y;
 	Image image;
 	
+	/**
+	 * @param x
+	 * @param y
+	 */
 	public ImoObject(int x,int y) {
 		this.x=x;
 		this.y=y;
 	}
+	/**
+	 * @return x
+	 */
 	public int getX() {
 		return x;
 	}

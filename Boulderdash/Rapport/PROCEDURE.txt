@@ -1,0 +1,8 @@
+ 
+ 			PROCEDURE "parniveau"
+
+DROP PROCEDURE `parniveau`;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `parniveau`(IN `i` INT(64)) 
+NOT DETERMINISTIC READS SQL DATA SQL SECURITY INVOKER 
+SELECT lignes from level
+where niveau=i

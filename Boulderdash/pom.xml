@@ -87,7 +87,7 @@
   	<module>controller</module>
   	<module>model</module>
   	<module>view</module>
-  	<module>Contract</module>
+  	
   	<module>main</module>
   </modules>
    <reporting>

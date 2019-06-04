@@ -1,15 +1,14 @@
 package Boulderdash.controller;
 
-import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import Boulderdash.model.Background;
-import Boulderdash.model.Diamonds;
-import Boulderdash.model.Ground;
 import Boulderdash.model.Rockman;
-import Boulderdash.model.Wall;
 
+/**
+ * @author GROUP 8
+ *
+ */
 public class KeyBoard implements KeyListener  {
 	static Rockman rockman=new Rockman(224,98);
 	static boolean up=true;
@@ -18,6 +17,9 @@ public class KeyBoard implements KeyListener  {
 	static boolean left=true;
 	Collision collision=new Collision();
 	
+	/**
+	 * @return rockman
+	 */
 	public static Rockman getRockman() {
 		return rockman;
 	}
@@ -27,11 +29,12 @@ public class KeyBoard implements KeyListener  {
 		// TODO Auto-generated method stub
 		
 	}
-	/**
-	 * @author GROUP 8
-	 *HUMAN INTERFACE MACHINE
-	 */
+	
 
+	/**
+	 *HUMAN INTERFACE MACHINE
+	 *
+	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
 		collision.dig();

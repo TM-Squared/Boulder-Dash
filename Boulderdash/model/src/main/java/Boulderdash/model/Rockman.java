@@ -5,7 +5,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 /**
  * @author GROUP 8
- *HERO OF GAME
+ *
  */
 public class Rockman  {
 	int x;
@@ -14,6 +14,10 @@ public class Rockman  {
 	public static ImoObject[][] imoobjet;
 	
 	
+	/**
+	 * @param x
+	 * @param y
+	 */
 	public Rockman(int x, int y) {
 		this.x=320;
 		this.y=160;

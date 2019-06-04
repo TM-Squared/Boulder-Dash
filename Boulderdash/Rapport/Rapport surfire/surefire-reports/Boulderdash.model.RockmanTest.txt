@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: Boulderdash.model.RockmanTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in Boulderdash.model.RockmanTest
+Boulderdash.model.RockmanTest.testGetX()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Boulderdash.model.RockmanTest.testGetX(RockmanTest.java:27)
+
+Boulderdash.model.RockmanTest.testGetY()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Boulderdash.model.RockmanTest.testGetY(RockmanTest.java:32)
+

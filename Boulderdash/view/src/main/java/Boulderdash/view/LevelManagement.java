@@ -15,7 +15,6 @@ public class LevelManagement {
 		while(GamePanel.lvl>5 && GamePanel.lvl<1) {
 			System.out.println("Choississez un niveau entre 1 et 5");
 			GamePanel.lvl=sc.nextInt();
-	
 		}
 		return GamePanel.lvl;
 	}

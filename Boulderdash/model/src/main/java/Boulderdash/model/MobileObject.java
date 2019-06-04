@@ -11,12 +11,19 @@ public class MobileObject {
 	int y;
 	Image image;
 	
+	/**
+	 * @param x
+	 * @param y
+	 */
 	public MobileObject(int x, int y) {
 		super();
 		this.x=x;
 		this.y=y;
 	}
 
+	/**
+	 * @return x
+	 */
 	public int getX() {
 		return x;
 	}

@@ -7,7 +7,6 @@
     <artifactId>Boulderdash</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>fr.exia</groupId>
   <artifactId>main</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>main</name>

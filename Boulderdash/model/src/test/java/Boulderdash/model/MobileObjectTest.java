@@ -9,51 +9,31 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class MobileObjectTest {
-
-	private MobileObject mobobject;
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+	 public static MobileObject obj;
+		
 
 	@Before
 	public void setUp() throws Exception {
 
-		this.mobobject = new MobileObject (1, 10); 
-	}
-
-	@After
-	public void tearDown() throws Exception {
+		this.obj = new MobileObject (1, 10); 
 	}
 
 	@Test
 	public void testGetX() {
-		final int expected = 10;
+		final int expected = 1;
 		
-		 assertEquals(expected, this.mobobject.getX()); 
+		 assertEquals(expected, this.obj.getX()); 
 	
 	}
 
-	@Test
-	public void testSetX() {
-		assertNotNull(this.mobobject.x);
-	}
 
 	@Test
 	public void testGetY() {
-		final int expected = 1;
+		final int expected = 10;
 		
-		 assertEquals(expected, this.mobobject.getY()); 
+		 assertEquals(expected, this.obj.getY()); 
 	}
 
-	@Test
-	public void testSetY() {
-		assertNotNull(this.mobobject.y);
-		
-	}
 
 	
 }

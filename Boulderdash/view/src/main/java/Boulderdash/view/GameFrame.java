@@ -10,6 +10,10 @@ import Boulderdash.controller.KeyBoard;
  */
 
 public class GameFrame extends JFrame{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static int longFen=2000;
 	public static int largFen=800;
 	public final static int x=42;

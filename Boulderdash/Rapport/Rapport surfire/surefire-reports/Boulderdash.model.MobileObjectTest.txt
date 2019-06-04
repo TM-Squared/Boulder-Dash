@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: Boulderdash.model.MobileObjectTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in Boulderdash.model.MobileObjectTest
+Boulderdash.model.MobileObjectTest.testGetX()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Boulderdash.model.MobileObjectTest.testGetX(MobileObjectTest.java:25)
+
+Boulderdash.model.MobileObjectTest.testGetY()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Boulderdash.model.MobileObjectTest.testGetY(MobileObjectTest.java:38)
+
+Boulderdash.model.MobileObjectTest.testSetX()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Boulderdash.model.MobileObjectTest.testSetX(MobileObjectTest.java:31)
+
+Boulderdash.model.MobileObjectTest.testSetY()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Boulderdash.model.MobileObjectTest.testSetY(MobileObjectTest.java:43)
+
